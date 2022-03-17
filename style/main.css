@@ -11,9 +11,11 @@
 
 /*elementos base*/
 body{
-   background: var(--preto);
+   background:var(--preto);
    font-family: 'Arial', Times, serif;
    color: white;
+   min-width: 320px;
+   max-width: 100%;
 }
 
 header .logo{
@@ -44,8 +46,7 @@ header .container{
 .jogo-principal{
    font-size: 20px;
    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/horizon-2.jpg');
-   
-      
+         
    height: 800px;
    width: 100%;
    background-size: cover;
@@ -61,7 +62,7 @@ header .container{
 }
 
 .jogo-principal .titulo{
-   font-size: 40px;
+   font-size: 45px;
    margin-top: 15%;
    font-family: 'Trebuchet MS', Arial, sans-serif;
 }
@@ -102,14 +103,64 @@ header .container{
 }
 
 .box-jogo {
-   height: 350px;
-   width: 300px;
-   display: block;
+   min-height: 350px;
+   max-height: 350px;
+   min-width: 300px;
+   max-width: 300px;
+   padding-left: 15px;
+   padding-right: 15px;
+   cursor: pointer;
+   animation: scaledown .4s linear;
+   animation-fill-mode: forwards;
+   
+}
+
+.box-jogo:hover {
+   z-index: 100;
+   animation: scale 0.4s linear;
+   animation-fill-mode: forwards;
+   display: flex;
+}
+
+@keyframes scaledown {
+   0%{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+   100%{
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+   }
+}
+
+@keyframes scale{
+   0%{
+      -webkit-transform: scale(1);
+      transform: scale(1);
+   }
+   100%{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      box-shadow: 10px 10px 60px 10px rgba(255, 255, 255, 0.5);
+   }
 }
 
 .titulo2{
    margin-bottom: 15px;
+   margin-top: 10px;  
+   font-size: 25px;
 }
+
+.titulo3{
+   margin-bottom: 15px;
+   margin-top: 10px;
+}
+
+.titulo4{
+   margin-bottom: 15px;
+   margin-top: 10px;
+}
+
 
 
 

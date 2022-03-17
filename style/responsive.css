@@ -1,4 +1,4 @@
-@media screen and (max-width:700px){
+@media screen and (max-width:320px){
    header .container{
    display: flex;
    flex-direction:column;
@@ -15,4 +15,13 @@
       width: 50%;
    }
    
+}
+
+.owl-nav{
+   position: center;
+
+}
+
+.owl-dot{
+
 }
